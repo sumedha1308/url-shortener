@@ -9,11 +9,10 @@ formElement.addEventListener('submit', (e) => {
     console.log('formData : ', formData);
     const request = new Request(`${apiHost}/api/urls/`, {
         method: 'POST',
-        // headers: new Headers({
-        //     'Content-Type': 'application/json',
-        // }),
-        // body: JSON.stringify(formData),
-        body: formData,
+        headers: new Headers({
+            'Content-Type': 'application/json',
+        }),
+        body: JSON.stringify(Object.fromEntries(formData)),
     });
     fetch(request)
         .then((res) => res.json())
