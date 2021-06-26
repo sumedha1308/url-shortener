@@ -1,0 +1,131 @@
+#Add stylelint, eslint and prettier config file :https://gist.github.com/gcnit/81e682c62b2abac426062d99a651fb60
+
+git clone https://github.com/gcnit/code-template.git
+
+#Rename folder to your project name
+mv code-template <folder-name>
+
+#Go to folder
+cd <folder-name>
+
+#Remove .git folder
+rm -rf .git
+
+#Initialize the directory as a npm package
+npm init -y
+
+#Install stylelint with standard style guide
+npm i -D stylelint stylelint-config-standard
+
+#Install eslint with airbnb style guide
+npm i -D eslint eslint-config-airbnb-base eslint-plugin-import
+
+#Install prettier and related packages
+npm i -D prettier eslint-config-prettier eslint-plugin-prettier
+
+#Install Following extensions on VSCode
+@id:dbaeumer.vscode-eslint
+@id:stylelint.vscode-stylelint
+@id:esbenp.prettier-vscode
+
+Added rule in .eslintrc.json to ignore error (Delete `␍`eslintprettier/prettier): "prettier/prettier": ["error", {
+      "endOfLine":"auto"
+    }],
+----------------------------------------------------------------------------------------------------------------------
+Commands to install express
+
+1.npm init -y
+2.npm install express --save
+3.app.js code-template
+----------------------------------------------------------------
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+app.listen(port, () => {
+  console.log(`Server listening at port: ${port}`)
+});
+----------------------------------------------------------------
+4.node app.js
+5.Add "start": "node app.js" inside scripts part of package.json
+6.npm start
+----------------------------------------------------------------
+7.create public folder for html,css,js,index.html
+8.create api.js for globle "/api" endpoint
+9.add dependencies in package.json here "nanoid":"3.1.23" then stop npm process run "npm i" then run "npm start"
+----------------------------------------------------------------------------------------------------------------
+10.Start design for URL shortener
+
+POST /urls/    //longUrl ->shortUrl
+User will submit long url using post method of form , then post method will send response for shortUrl
+Request Body
+{
+	longUrl : <longUrl>
+}
+Response 
+{
+	shortURL : <shortUrl>
+}
+
+Once we get shortId of url we can map shortId to longUrl as Database would be urls { shortId : longUrl }
+
+GET /urls/:shortId    //shortUrl -> longUrl
+Response
+Status code:200
+{
+	longUrl : <longUrl>
+}
+
+11.create urls.js for URL shortener logic
+12.Create router in api.js for "/urls" endpoint.
+---------------------------------------------
+const express = require("express");
+
+const router = express.Router();
+
+const urls = require("./urls");
+
+router.use("/urls", urls);
+
+module.exports = router;
+-------------------------------------------
+13.Add "/api" endPoint in main file app.js
+const api = require("./api");
+
+app.use("/static", express.static("public"));
+
+app.use(express.json());
+
+app.use("/api", api);
+-------------------------------------------
+14. API will look like <localhost>/api/urls/ and application content type would be json (Optional application content type can be formUrlEncoded)
+15. Coding in urls.js Created urls ={} as a DB then logic for get() and post() exported router.
+16. Testing of API in postman
+		post : http://localhost:3000/api/urls/
+			params : body ,content type- JSON
+			body : {
+				"longUrl":"https://www.amazon.in/"
+				}
+			response: {"shortUrl":"http://localhost:3000/api/urls/AyR-6zpSIbKYNEjIdRL_A"}
+		Get : copy http://localhost:3000/api/urls/AyR-6zpSIbKYNEjIdRL_A and pasted on browser , link redirected to https://www.amazon.in/
+		
+17.Start frontEnd design
+
+	create form to get response from user
+		1)Input type = URL
+		2)Button for Shortne
+		3)Event listener on button = onClick
+			Testcases:
+				1)If input is empty and click on shorten button then message to enter valid url
+				3)If URL start bitly.com/ then show this is already a bitly link
+				2)If URL is valid and clicked on shorten button then max 4 urls will be added in table with 2 columns first for long url and second for short url
+				4)If we clicked on shorten button then Input filed will be changed to shortURL and shorten button will become copy button.
+				5)If URL already present in the table then show already present
+				6)IF clicked on copy button change to copied then after 2 second will change to copy again
+		4)Event on Input field = onChange
+				1)If input field changed then copy button will change to shorten 
+
