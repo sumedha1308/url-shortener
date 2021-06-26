@@ -2,16 +2,17 @@
 /* eslint-disable no-console */
 const formElement = document.querySelector('#form');
 const urlInput = document.querySelector('#longUrl');
+const apiHost = window.location.origin;
 formElement.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(formElement);
     console.log('formData : ', formData);
-    const request = new Request('http://localhost:3000/api/urls/', {
+    const request = new Request(`${apiHost}/api/urls/`, {
         method: 'POST',
-        headers: new Headers({
-            'Content-Type': 'application/json',
-        }),
-        body: JSON.stringify(formData),
+        // headers: new Headers({
+        //     'Content-Type': 'application/json',
+        // }),
+        body: formData,
     });
     fetch(request)
         .then((res) => res.json())
