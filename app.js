@@ -8,7 +8,7 @@ const api = require('./api');
 
 app.use('/static', express.static('public'));
 
-app.use(express.json());
+// app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/api', api);

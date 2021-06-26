@@ -7,7 +7,7 @@ router.use(express.json());
 const urls = {};
 
 router.get('/', (req, res) => {
-    res.send('All Urls');
+    res.send(urls);
 });
 
 router.get('/:shortUrlId', (req, res) => {

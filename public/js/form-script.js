@@ -12,6 +12,7 @@ formElement.addEventListener('submit', (e) => {
         // headers: new Headers({
         //     'Content-Type': 'application/json',
         // }),
+        // body: JSON.stringify(formData),
         body: formData,
     });
     fetch(request)
