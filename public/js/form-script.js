@@ -1,7 +1,7 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable no-console */
 const formElement = document.querySelector('#form');
-// const urlInput = document.querySelector('#longUrl');
+const urlInput = document.querySelector('#longUrl');
 formElement.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(formElement);
@@ -15,5 +15,7 @@ formElement.addEventListener('submit', (e) => {
     });
     fetch(request)
         .then((res) => res.json())
-        .then((json) => console.log('json in form', json));
+        .then((json) => {
+            urlInput.value = json.shortUrl;
+        });
 });

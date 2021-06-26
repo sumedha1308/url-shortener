@@ -17,7 +17,7 @@ router.get('/:shortUrlId', (req, res) => {
         res.redirect(longUrl);
         // res.send(longUrl);
     } else {
-        res.status(404).send('User does not exists');
+        res.status(404).send('Url does not exists');
     }
 });
 
