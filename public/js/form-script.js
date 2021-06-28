@@ -7,7 +7,6 @@ window.onload = () => {
     const apiHost = window.location.origin;
     const tableDiv = document.querySelector('#table-div');
     const recentUrlsDiv = document.querySelector('#recent-urls');
-    const hostname = 'https://url-shortner-sumedha.herokuapp.com/';
 
     const createTable = (jsonObj) => {
         recentUrlsDiv.innerHTML = 'Recent URLs : ';
@@ -37,7 +36,7 @@ window.onload = () => {
         e.preventDefault();
         const formData = new FormData(formElement);
         console.log('formData : ', formData);
-        const request = new Request(`${hostname}/api/urls/`, {
+        const request = new Request(`${apiHost}/api/urls/`, {
             method: 'POST',
             headers: new Headers({
                 'Content-Type': 'application/json',

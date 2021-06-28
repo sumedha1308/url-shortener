@@ -6,6 +6,8 @@ const router = express.Router();
 router.use(express.json());
 const urls = {};
 
+const hostname = 'https://url-shortner-sumedha.herokuapp.com/';
+
 router.get('/', (req, res) => {
     res.send(urls);
 });
@@ -30,7 +32,7 @@ router.post('/', (req, res) => {
     if (longUrl) {
         urls[shortUrlId] = longUrl;
         console.log('post method urls : ', urls);
-        res.send({ shortUrl: `http://localhost:3000/api/urls/${shortUrlId}` });
+        res.send({ shortUrl: `${hostname}/api/urls/${shortUrlId}` });
     } else {
         res.send({ shortUrl: `` });
     }
