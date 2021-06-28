@@ -123,27 +123,22 @@ app.use("/api", api);
 		5)Event listener on button = onClick
 			Testcases:
 				1)If input is empty and click on shorten button then message to enter valid url --Done
-				3)If URL start bitly.com/ then show this is already a bitly link
-				2)If URL is valid and clicked on shorten button then max 4 urls will be added in table with 2 columns first for long url and second for short url
+				2)If URL start bitly.com/ then show this is already a bitly link
+				3)If URL is valid and clicked on shorten button then max 5 urls will be added in table with 2 columns first for long url and second for short url --Done
 					table should contain 2 columns - original URL and short URL
 					To get urls object we can use fetch (GET API for All the urls)
+					E.g :
 					G3T6NysuzdDVZG3Hz4YoW: "https://www.netflix.com/in/"
 					GnkiBZDG53EQuofjSn_2B: "https://url-srtnr.herokuapp.com/"
 					iYyQB-TgKlobkKV5xD3kG: "https://www.linkedin.com/feed/"
 					oF-nJcHGeALWzYUAJaePM: "https://flaviocopes.com/how-to-iterate-object-properties-javascript/"
 
 					-Advantage : after refreshing browser still get all the URLs but once we restart applications URLs will be lost
-					-Once we get all urls{} create table . reverse object then take only 4 latest urls to show in table.
+					-Once we get all urls{} create table . reverse object then take only 5 latest urls to show in table.
 					
-					
-				
-				
-				
-				
 				4)If we clicked on shorten button then Input filed will be changed to shortURL and shorten button will become copy button. --Done
-				5)If URL already present in the table then show already present
-				6)IF clicked on copy button change to copied then after 2 second will change to copy again --Done
-				7)Input should contain URLs only --done
-		4)Event on Input field = onChange
+				5)IF clicked on copy button change to copied then after 2 second will change to copy again --Done
+				6)Input should contain URLs only --done
+		6)Event on Input field = onChange
 				1)If input field changed then copy button will change to shorten --Done
 
