@@ -37,7 +37,7 @@ window.onload = () => {
         e.preventDefault();
         const formData = new FormData(formElement);
         console.log('formData : ', formData);
-        const request = new Request(`${hostname}/api/urls/`, {
+        const request = new Request(`${apiHost}/api/urls/`, {
             method: 'POST',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -49,6 +49,7 @@ window.onload = () => {
                 .then((res) => res.json())
                 .then((json) => {
                     urlInput.value = json.shortUrl;
+                    console.log("UrlInput value : ",urlInput.value);
                     if (urlInput.value !== '') {
                         btnShortner.textContent = 'Copy';
                         btnShortner.style.backgroundColor = 'green';
