@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>URL Shortener</title>
+    <link rel="icon" type="image/png" href="resources/icons8-shorten-urls-48.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/form-script.js"></script>
 </head>
 <body>
+  <section>
+    
     <form id="form" method="post">
-        <div>
-          <input type="url" id="longUrl" name="longUrl" placeholder="Please Enter long URL">
-        </div>
-        <div>
-          <button value="Shortner" name="submit">Shortner</button>
-        </div>
-      </form>
-      <script src="js/form-script.js"></script>
+      <div class="heading">
+        <div class="tag-line">URL&nbsp;Shortner</div>
+        <b><hr></b>
+        <div class="description">A URL shortener is a tool that creates a short, unique URL.You can copy short URL to redirect to the long URL. Also you can see recent 5 URLs.</div>
+      </div>
+      <div class="url-input">
+        <input type="url" id="longUrl" name="longUrl" placeholder="Please Enter long URL">
+        <button value="Shortner" id="btn-shortener" class="btn" name="submit">Shortner</button>
+      </div>
+      <div class="recent-urls" id="recent-urls"></div>
+      <div id="table-div"></div>
+    </form>
+    
+  </section>
 </html>

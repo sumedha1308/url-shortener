@@ -27,9 +27,13 @@ router.post('/', (req, res) => {
     const { longUrl } = data;
     console.log('post method long url : ', longUrl);
     const shortUrlId = nanoId.nanoid();
-    urls[shortUrlId] = longUrl;
-    console.log('post method urls : ', urls);
-    res.send({ shortUrl: `http://localhost:3000/api/urls/${shortUrlId}` });
+    if (longUrl) {
+        urls[shortUrlId] = longUrl;
+        console.log('post method urls : ', urls);
+        res.send({ shortUrl: `http://localhost:3000/api/urls/${shortUrlId}` });
+    } else {
+        res.send({ shortUrl: `` });
+    }
 });
 
 module.exports = router;

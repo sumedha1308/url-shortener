@@ -1,0 +1,262 @@
+/* stylelint-disable indentation */
+* {
+    margin: 0;
+    font-size: medium;
+}
+
+#form {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 5%;
+    background-image: url(../resources/background5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.heading {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.tag-line {
+    font-size: 50px;
+    font-style: bold;
+    font-family: 'Nunito Sans', sans-serif;
+    text-align: center;
+}
+
+.description {
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+.url-input {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+hr {
+    border-top: 2px solid black;
+    margin-top: 20px;
+}
+
+#longUrl {
+    margin-top: 5%;
+    border-radius: 10px;
+    width: 600px;
+    padding: 5px;
+    padding-right: 200px;
+    height: 35px;
+    margin-left: 100px;
+    text-indent: 20px;
+    background-color: white;
+    color: #1d1a51;
+    border: 2px solid black;
+}
+
+#btn-shortener {
+    margin-top: 5%;
+    margin-left: 100px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    margin-right: 100px;
+    background-color: blue;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#btn-shortener:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+}
+
+@keyframes background-color {
+    100% {
+        background-color: skyblue;
+    }
+}
+
+.recent-urls {
+    margin-top: 3%;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: justify;
+    font-size: 2em;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+table {
+    margin-top: 60px;
+    margin-left: 100px;
+    margin-right: 50px;
+    border: 2px solid black;
+    border-collapse: collapse;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    padding: 10px 40px;
+}
+
+th,
+td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 10px 40px;
+}
+
+tbody {
+    word-break: break-word;
+}
+
+thead {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: black;
+}
+
+td a {
+    color: black;
+    font-weight: 500;
+}
+
+tr:hover {
+    background-color: orange;
+}
+
+a[target='_blank']::after {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+    margin-left: 5px;
+}
+
+@media all and (max-width: 800px) {
+    #form {
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 5%;
+        background-image: url(../resources/background5.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+    }
+
+    .heading {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .tag-line {
+        font-size: 50px;
+        font-style: bold;
+        font-family: 'Nunito Sans', sans-serif;
+        text-align: center;
+    }
+
+    .description {
+        margin-top: 50px;
+        font-size: 30px;
+    }
+
+    hr {
+        margin-top: 20px;
+        border-top: 2px solid black;
+    }
+
+    .url-input {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    #longUrl {
+        margin-top: 5%;
+        border-radius: 10px;
+        width: 600px;
+        padding: 5px;
+        padding-right: 200px;
+        height: 35px;
+        margin-left: 100px;
+        margin-right: 100px;
+        text-indent: 20px;
+        background-color: white;
+        color: #1d1a51;
+        border: 2px solid black;
+    }
+
+    #btn-shortener {
+        margin-top: 5%;
+        margin-left: 300px;
+        padding: 5px;
+        border-radius: 10px;
+        width: 150px;
+        height: 50px;
+        margin-right: 100px;
+        background-color: blue;
+        border: 2px solid black;
+        cursor: pointer;
+    }
+
+    #btn-shortener:hover {
+        animation-name: background-color;
+        animation-duration: 500ms;
+    }
+
+    @keyframes background-color {
+        100% {
+            background-color: skyblue;
+        }
+    }
+
+    .recent-urls {
+        margin-top: 3%;
+        margin-left: 100px;
+        margin-right: 100px;
+        text-align: justify;
+        font-size: 2em;
+        font-family: 'Nunito Sans', sans-serif;
+    }
+
+    table {
+        margin-top: 60px;
+        margin-left: 100px;
+        margin-right: 100px;
+        border: 2px solid black;
+        border-collapse: collapse;
+        border-radius: 6px;
+        -moz-border-radius: 6px;
+        padding: 10px 40px;
+    }
+
+    th,
+    td {
+        border: 2px solid black;
+        border-collapse: collapse;
+        padding: 10px 40px;
+    }
+
+    tbody {
+        word-break: break-word;
+    }
+
+    thead {
+        font-size: 1.25em;
+        font-weight: bold;
+        color: black;
+    }
+
+    td a {
+        color: black;
+        font-weight: 500;
+    }
+
+    a[target='_blank']::after {
+        content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+        margin-left: 5px;
+    }
+
+    tr:hover {
+        background-color: orange;
+    }
+}
