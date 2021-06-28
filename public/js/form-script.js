@@ -1,5 +1,4 @@
 /* eslint-disable no-return-assign */
-/* eslint-disable no-console */
 window.onload = () => {
     const formElement = document.querySelector('#form');
     const urlInput = document.querySelector('#longUrl');
@@ -22,7 +21,6 @@ window.onload = () => {
             const tr = tbody.insertRow();
             tr.insertCell().innerHTML = `<a href="${apiHost}/api/urls/${prop}" target="_blank">${apiHost}/api/urls/${prop}</a>`;
             tr.insertCell().innerHTML = `<a href="${jsonObj[prop]}" target="_blank">${jsonObj[prop]}</a>`;
-            console.log(`PropertyName: ${prop}, its Value: ${jsonObj[prop]}`);
         });
     };
 
@@ -35,7 +33,6 @@ window.onload = () => {
     formElement.addEventListener('submit', (e) => {
         e.preventDefault();
         const formData = new FormData(formElement);
-        console.log('formData : ', formData);
         const request = new Request(`${apiHost}/api/urls/`, {
             method: 'POST',
             headers: new Headers({
@@ -48,7 +45,6 @@ window.onload = () => {
                 .then((res) => res.json())
                 .then((json) => {
                     urlInput.value = json.shortUrl;
-                    console.log('UrlInput value : ', urlInput.value);
                     if (urlInput.value !== '') {
                         btnShortner.textContent = 'Copy';
                         btnShortner.style.backgroundColor = 'green';
