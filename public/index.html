@@ -19,7 +19,7 @@
         <div class="description">A URL shortener is a tool that creates a short, unique URL.You can copy short URL to redirect to the long URL. Also you can see recent 5 URLs.</div>
       </div>
       <div class="url-input">
-        <input type="url" id="longUrl" name="longUrl" placeholder="Please Enter long URL">
+        <input type="url" id="longUrl" name="longUrl" pattern="https?://.*" placeholder="Please Enter long URL">
         <button value="Shortner" id="btn-shortener" class="btn" name="submit">Shortner</button>
       </div>
       <div class="recent-urls" id="recent-urls"></div>
