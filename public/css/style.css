@@ -132,6 +132,11 @@ a[target='_blank']::after {
 }
 
 @media all and (max-width: 800px) {
+    * {
+        margin: 0;
+        font-size: medium;
+    }
+
     #form {
         margin-right: auto;
         margin-left: auto;

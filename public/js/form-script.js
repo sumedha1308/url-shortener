@@ -7,7 +7,7 @@ window.onload = () => {
     const apiHost = window.location.origin;
     const tableDiv = document.querySelector('#table-div');
     const recentUrlsDiv = document.querySelector('#recent-urls');
-    const hostname = 'url-shortner-sumedha.herokuapp.com/';
+    const hostname = 'https://url-shortner-sumedha.herokuapp.com/';
 
     const createTable = (jsonObj) => {
         recentUrlsDiv.innerHTML = 'Recent URLs : ';
