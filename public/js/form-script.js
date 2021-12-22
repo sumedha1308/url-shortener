@@ -47,7 +47,7 @@ window.onload = () => {
                     urlInput.value = json.shortUrl;
                     if (urlInput.value !== '') {
                         btnShortner.textContent = 'Copy';
-                        btnShortner.style.backgroundColor = 'green';
+                        btnShortner.style.backgroundColor = 'lightgreen';
                         btnShortner.style.cursor = 'pointer';
                     }
                 });
@@ -65,11 +65,11 @@ window.onload = () => {
     btnShortner.addEventListener('click', () => {
         if (btnShortner.textContent === 'Copy') {
             btnShortner.textContent = 'Copied';
-            btnShortner.style.backgroundColor = 'yellow';
+            btnShortner.style.backgroundColor = 'lightyellow';
             btnShortner.style.cursor = 'pointer';
             setTimeout(() => {
                 btnShortner.textContent = 'Copy';
-                btnShortner.style.backgroundColor = 'green';
+                btnShortner.style.backgroundColor = 'lightgreen';
             }, 1000);
             urlInput.select();
             document.execCommand('copy');
@@ -77,7 +77,7 @@ window.onload = () => {
     });
     urlInput.addEventListener('change', () => {
         btnShortner.textContent = 'Shorten';
-        btnShortner.style.backgroundColor = 'blue';
+        btnShortner.style.backgroundColor = 'lightblue';
         btnShortner.style.cursor = 'pointer';
     });
 };
