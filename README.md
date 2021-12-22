@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-# [URL Shortener](https://url-shortner-sumedha.herokuapp.com/)<br>
+# [URL Shortener](https://url-shorteners5.herokuapp.com/)<br>
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
