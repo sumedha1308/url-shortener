@@ -101,8 +101,8 @@ hr {
 
 table {
     margin-top: 60px;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 10%;
+    margin-right: 5%;
     border: 2px solid black;
     border-collapse: collapse;
     border-radius: 6px;
@@ -156,19 +156,18 @@ a[target='_blank']::after {
         margin-right: auto;
         margin-left: auto;
         padding-top: 5%;
-        /* background-image: url(../resources/background5.jpg); */
         background-repeat: no-repeat;
         background-size: cover;
         min-height: 100vh;
     }
 
     .heading {
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
     .tag-line {
-        font-size: xx-large;
+        font-size: larger;
         font-style: bold;
         font-family: 'Nunito Sans', sans-serif;
         text-align: center;
@@ -181,7 +180,7 @@ a[target='_blank']::after {
     }
 
     .desc-font {
-        font-size: larger;
+        font-size: large;
         line-height: 25px;
     }
 
@@ -199,11 +198,11 @@ a[target='_blank']::after {
     #longUrl {
         margin-top: 5%;
         border-radius: 10px;
-        width: 70%;
+        width: 90%;
         padding: 5px;
         height: 35px;
-        margin-left: 15%;
-        margin-right: 10%;
+        margin-left: 10%;
+        margin-right: 2%;
         text-indent: 20px;
         background-color: white;
         color: #1d1a51;
@@ -215,7 +214,7 @@ a[target='_blank']::after {
         margin-left: 35%;
         padding: 5px;
         border-radius: 10px;
-        width: 30%;
+        width: 40%;
         height: 50px;
         background-color: lightblue;
         border: 2px solid black;
@@ -235,33 +234,31 @@ a[target='_blank']::after {
 
     .recent-urls {
         margin-top: 3%;
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-left: 10%;
+        margin-right: 5%;
         text-align: justify;
-        font-size: 2em;
+        font-size: 1.3em;
         font-family: 'Nunito Sans', sans-serif;
     }
 
     table {
-        margin-top: 60px;
-        margin-left: 20%;
-        margin-right: 20%;
+        margin-top: 30px;
         border: 2px solid black;
         border-collapse: collapse;
         border-radius: 6px;
         -moz-border-radius: 6px;
-        padding: 10px 40px;
+        padding: 2% 10%;
     }
 
     #table-div {
-        margin-right: 20%;
+        margin-right: 10%;
     }
 
     th,
     td {
         border: 2px solid black;
         border-collapse: collapse;
-        padding: 10px 30px;
+        padding: 2% 5%;
     }
 
     tbody {
@@ -291,6 +288,6 @@ a[target='_blank']::after {
     }
 
     tr:hover {
-        background-color: lightsalmon;
+        background-color: linen;
     }
 }
