@@ -30,10 +30,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+![image](https://github.com/sumedha1308/url-shortener/blob/master/public/resources/First-Page.PNG)
+
+
 There are many great URL shortener available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. 
 
 Here's why:
 * User can easily create short, secure, unique URL from Long URL.
+
+* User's time is saved in shortening same URL again as recent 5 URLs are saved in the table.
+* User's can copy short URL and redirect to long URL or direct redirection to long URL is also possible to save time :smile:
 * This URL Shortener saves the user's time in shortening the same URL again as the recent 5 URLs are saved in the table.
 * These short URLs can be easily copied or redirected to specified long URLs. :smile:
 

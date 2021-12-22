@@ -13,17 +13,23 @@
   <section>
     
     <form id="form" method="post">
-      <div class="heading">
-        <div class="tag-line">URL&nbsp;Shortener</div>
-        <b><hr></b>
-        <div class="description">A URL shortener is a tool that creates a short, unique URL.You can copy short URL to redirect to the long URL. Also you can see recent 5 URLs.</div>
+      <div class="div-for-shadow">
+        <div class="heading">
+          <div class="tag-line">URL&nbsp;Shortener</div>
+          <!-- <div class="hr-module"><hr></div> -->
+          <div class="description"><ul>
+            <li class="desc-font">A URL shortener is a tool that creates a short, unique URL.</li>
+            <li class="desc-font">You can copy short URL to redirect to the long URL.</li>
+            <li class="desc-font">You can see recent 5 URLs.</li>
+          </ul></div>
+        </div>
+        <div class="url-input">
+          <input type="url" id="longUrl" name="longUrl" pattern="https?://.*" placeholder="Enter long URL">
+          <button value="Shortner" id="btn-shortener" class="btn" name="submit">Shortner</button>
+        </div>
+        <div class="recent-urls" id="recent-urls"></div>
+        <div id="table-div"></div>
       </div>
-      <div class="url-input">
-        <input type="url" id="longUrl" name="longUrl" pattern="https?://.*" placeholder="Please Enter long URL">
-        <button value="Shortner" id="btn-shortener" class="btn" name="submit">Shortner</button>
-      </div>
-      <div class="recent-urls" id="recent-urls"></div>
-      <div id="table-div"></div>
     </form>
     
   </section>
