@@ -5,7 +5,7 @@ const router = express.Router();
 router.use(express.json());
 const urls = {};
 
-const hostname = 'https://url-shortner-sumedha.herokuapp.com';
+const hostname = 'https://url-shorteners5.herokuapp.com';
 
 router.get('/', (req, res) => {
     res.send(urls);
