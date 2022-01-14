@@ -92,7 +92,7 @@ This is set of instructions and information to use URL shortener.
 <br>
 
 ```js
-GET https://url-shortner-sumedha.herokuapp.com/api/urls/
+GET https://url-shorteners5.herokuapp.com//api/urls/
 
 Sample Response Body :
 {
@@ -106,9 +106,9 @@ Status : 404 (URL does not exist)
 <br>
 
 ```js
-GET https://url-shortner-sumedha.herokuapp.com/api/urls/shortUrlID
+GET https://url-shorteners5.herokuapp.com/api/urls/shortUrlID
 
-If User Copy GET API (https://url-shortner-sumedha.herokuapp.com/api/urls/shortUrlId) in browser , Original Long URL will be open.
+If User Copy GET API (https://url-shorteners5.herokuapp.com/api/urls/shortUrlId) in browser , Original Long URL will be open.
 
 Status : 404 (URL does not exist)
 ```
@@ -118,7 +118,7 @@ Status : 404 (URL does not exist)
 <br>
 
 ```js
-POST https://url-shortner-sumedha.herokuapp.com/api/urls/
+POST https://url-shorteners5.herokuapp.com/api/urls/
 Sample Request Body:
 {
 	"longUrl":"https://www.amazon.in/"
@@ -126,7 +126,7 @@ Sample Request Body:
 
 Sample Response Body :
 {
-    "shortUrl": "https://url-shortner-sumedha.herokuapp.com/api/urls/56ZmrO1-3WsjZ_Y8S31bd"
+    "shortUrl": "https://url-shorteners5.herokuapp.com/api/urls/56ZmrO1-3WsjZ_Y8S31bd"
 }
 
 ```
