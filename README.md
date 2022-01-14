@@ -91,7 +91,7 @@ This is set of instructions and information to use URL shortener.
 
 <br>
 
-```
+```js
 GET https://url-shortner-sumedha.herokuapp.com/api/urls/
 
 Sample Response Body :
