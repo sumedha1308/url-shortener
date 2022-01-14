@@ -105,7 +105,7 @@ Status : 404 (URL does not exist)
 
 <br>
 
-```
+```js
 GET https://url-shortner-sumedha.herokuapp.com/api/urls/shortUrlID
 
 If User Copy GET API (https://url-shortner-sumedha.herokuapp.com/api/urls/shortUrlId) in browser , Original Long URL will be open.
@@ -117,7 +117,7 @@ Status : 404 (URL does not exist)
 
 <br>
 
-```
+```js
 POST https://url-shortner-sumedha.herokuapp.com/api/urls/
 Sample Request Body:
 {
